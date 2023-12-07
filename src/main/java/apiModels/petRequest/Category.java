@@ -31,8 +31,9 @@ public class Category{
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof Category category)) return false;
-		return getId() == category.getId() && getName().equals(category.getName());
+		if (!(o instanceof Category )) return false;
+		Category category = (Category) o;
+		return getId() == category.getId() && Objects.equals(getName(), category.getName());
 	}
 
 	@Override

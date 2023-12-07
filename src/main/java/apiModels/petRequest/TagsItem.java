@@ -31,8 +31,9 @@ public class TagsItem {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof TagsItem tagsItem)) return false;
-        return getId() == tagsItem.getId() && getName().equals(tagsItem.getName());
+        if (!(o instanceof TagsItem )) return false;
+        TagsItem tagsItem = (TagsItem) o;
+        return getId() == tagsItem.getId() && Objects.equals(getName(), tagsItem.getName());
     }
 
     @Override

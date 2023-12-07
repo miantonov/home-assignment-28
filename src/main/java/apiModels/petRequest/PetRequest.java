@@ -76,7 +76,8 @@ public class PetRequest{
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof PetRequest that)) return false;
+		if (!(o instanceof PetRequest )) return false;
+		PetRequest that = (PetRequest) o;
 		return getId() == that.getId() && Objects.equals(getPhotoUrls(), that.getPhotoUrls()) && Objects.equals(getName(), that.getName()) && Objects.equals(getCategory(), that.getCategory()) && Objects.equals(getTags(), that.getTags()) && Objects.equals(getStatus(), that.getStatus());
 	}
 
